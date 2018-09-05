@@ -1,9 +1,11 @@
-package com.liufeismart.test;
+package com.willblaschko.android.alexavoicelibrary;
 
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 
+import com.liufeismart.test.AvsListenerInterface;
+import com.liufeismart.test.Constants;
 import com.willblaschko.android.alexa.AlexaManager;
 import com.willblaschko.android.alexa.audioplayer.AlexaAudioPlayer;
 import com.willblaschko.android.alexa.callbacks.AsyncCallback;
@@ -320,9 +322,9 @@ public class MainActivity extends AppCompatActivity implements AvsListenerInterf
 
         @Override
         public void playerProgress(AvsItem item, long offsetInMilliseconds, float percent) {
-            if(BuildConfig.DEBUG) {
-                //Log.i(TAG, "Player percent: " + percent);
-            }
+//            if(BuildConfig.DEBUG) {
+//                //Log.i(TAG, "Player percent: " + percent);
+//            }
             if(item instanceof AvsPlayContentItem || item == null){
                 return;
             }
