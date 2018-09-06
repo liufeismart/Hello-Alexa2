@@ -12,8 +12,50 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <action android:name="android.intent.action.ASSIST" />
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginWebViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="https"
+                    android:host="www.amazon.com"
+                    android:pathPattern="/ap/oa"/>
+            </intent-filter>
+        </activity>
+
+        <!-- required so we can get back the result of our authentication //-->
+        <!--<activity-->
+        <!--android:name="com.amazon.identity.auth.device.authorization.AuthorizationActivity"-->
+        <!--android:allowTaskReparenting="true"-->
+        <!--android:launchMode="singleTask"-->
+        <!--android:theme="@android:style/Theme.NoDisplay" >-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.VIEW" />-->
+
+        <!--<category android:name="android.intent.category.DEFAULT" />-->
+        <!--<category android:name="android.intent.category.BROWSABLE" />-->
+
+        <!--&lt;!&ndash; host should be our application package //&ndash;&gt;-->
+        <!--<data-->
+        <!--android:host="com.willblaschko.android.alexavoicelibrary"-->
+        <!--android:scheme="amzn" />-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+        <activity android:name="com.amazon.identity.auth.device.workflow.WorkflowActivity"
+            android:theme="@android:style/Theme.NoDisplay"
+            android:allowTaskReparenting="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <!-- android:host must use the full package name found in Manifest General Attributes -->
+                <data android:host="${applicationId}" android:scheme="amzn"/>
             </intent-filter>
         </activity>
     </application>
