@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.willblaschko.android.alexavoicelibrary">
+    package="com.humax.app.armoto">
 
     <application
         android:allowBackup="true"
@@ -12,20 +12,9 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.ASSIST" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".LoginWebViewActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <data
-                    android:scheme="https"
-                    android:host="www.amazon.com"
-                    android:pathPattern="/ap/oa"/>
-            </intent-filter>
+
         </activity>
 
         <!-- required so we can get back the result of our authentication //-->

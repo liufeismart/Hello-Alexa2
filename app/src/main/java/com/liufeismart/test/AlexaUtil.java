@@ -48,7 +48,7 @@ public class AlexaUtil {
     private final int STATE_PROMPTING = 4;
     private final int STATE_FINISHED = 0;
 
-    private final String PRODUCT_ID = "Sample3";
+    private final String PRODUCT_ID = "Armoto2018";
 
 
     private static final int AUDIO_RATE = 16000;

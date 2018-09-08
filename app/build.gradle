@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
     buildToolsVersion '25.0.0'
     defaultConfig {
-        applicationId "com.willblaschko.android.alexavoicelibrary"
+        applicationId "com.humax.app.armoto"
         minSdkVersion 19
         targetSdkVersion 24
         versionCode 1
